@@ -1,0 +1,13 @@
+server.port: 8080
+
+togglz.feature-enums: ToggleFeatures
+togglz.console.enabled: true
+togglz.console.path: /togglz-console
+togglz.console.secured: false
+togglz.console.use-management-port: false
+
+spring.data.mongodb.host: db
+spring.data.mongodb.port: 27017
+spring.data.mongodb.database: features
+spring.togglz.collection-name: togglz
+

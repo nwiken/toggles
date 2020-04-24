@@ -1,0 +1,21 @@
+server.port: 8080
+
+management:
+  endpoint.health.show-details: always
+  endpoints.web.exposure.include: '*'
+
+spring.togglz.collection-name: togglz
+
+togglz:
+  feature-enums: ToggleFeatures
+  console:
+    enabled: true
+    path: /togglz-console
+    secured: false
+    use-management-port: false
+
+spring.data.mongodb:
+  host: localhost
+  port: 27017
+  database: features
+
