@@ -10,7 +10,7 @@ import org.togglz.mongodb.MongoStateRepository;
 @Configuration
 public class ToggleConfig  {
 
-  @Value("${spring.togglz.collection-name}")
+  @Value("${spring.togglz.collection-name:togglz}")
   private String togglzTableName;
 
   @Value("${spring.data.mongodb.database}")

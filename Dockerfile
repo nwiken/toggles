@@ -13,7 +13,7 @@ WORKDIR /src/app
 EXPOSE 8080
 
 # The application's jar file
-COPY target/*.jar /src/app/togglz.jar
+COPY build/libs/*.jar /src/app/togglz.jar
 
 # Run the jar file
 ENTRYPOINT ["java","-jar","-Dspring.profiles.active=docker", "togglz.jar"]

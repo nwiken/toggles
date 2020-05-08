@@ -1,5 +1,14 @@
 server.port: 8080
 
+spring.application.name: toggles
+server.tomcat.accesslog.enabled: true
+server.tomcat.accesslog.directory: /Users/niklaswiken/repos/toggles/logs
+server.tomcat.accesslog.baseDir: /Users/niklaswiken/repos/toggles
+server.tomcat.accesslog.pattern: '{"@timestamp":"%{yyyy-MM-dd}tT%{HH:mm:ss.SSSXXX}t","logType":"access","appName":"${spring.application.name}","tomcat.source_ip":"%h","tomcat.identity":"%l","tomcat.username":"%u","tomcat.request_method":"%m","tomcat.request_path":"%U","tomcat.query_string":"%q","tomcat.status":%s,"tomcat.protocol":"%H","tomcat.response-size":%B,"tomcat.duration":%D,"tomcat.java_thread_name":"%I","tomcat.user_agent":"%{User-Agent}i","tomcat.referer":"%{Referer}i"}'
+server.tomcat.accesslog.suffix: .log
+server.tomcat.accesslog.prefix: access_log
+server.tomcat.accesslog.file-date-format: .yyyy-MM-dd
+
 management:
   endpoint.health.show-details: always
   endpoints.web.exposure.include: '*'
@@ -7,7 +16,7 @@ management:
 spring.togglz.collection-name: togglz
 
 togglz:
-  feature-enums: ToggleFeatures
+  feature-enums: se.toggle.ToggleFeatures
   console:
     enabled: true
     path: /togglz-console
